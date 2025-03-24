@@ -1,8 +1,9 @@
 import socket
 import threading
 import uuid
-from prometheus_client import push_to_gateway, CollectorRegistry
 from typing import Any
+
+from prometheus_client import CollectorRegistry, push_to_gateway
 
 
 class PrometheusPusher:
@@ -12,7 +13,7 @@ class PrometheusPusher:
         job_name: str = "python_app",
         push_interval: int = 60,
         registry: CollectorRegistry = None,
-        grouping_labels: dict[str, Any] = None
+        grouping_labels: dict[str, Any] = None,
     ):
         self.gateway_url = gateway_url
         self.job_name = job_name
@@ -22,7 +23,7 @@ class PrometheusPusher:
         self.grouping_labels = {
             "instance": socket.gethostname(),
             "worker_id": self.worker_id,
-            **(grouping_labels or {})
+            **(grouping_labels or {}),
         }
         self._stop_event = threading.Event()
         self._thread = None
