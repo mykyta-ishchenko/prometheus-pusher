@@ -15,11 +15,11 @@ Prometheus Pusher is a minimal yet powerful Python library that enables you to a
 You can install library via pip:
 
 ```bash
-pip install git@github.com:mykyta-ishchenko/prometheus-pusher.git
+pip install git+https://github.com/mykyta-ishchenko/prometheus-pusher.git
 ```
 
 You can install library via poetry:
 
 ```bash
-poetry add git@github.com:mykyta-ishchenko/prometheus-pusher.git
+poetry add git+https://github.com/mykyta-ishchenko/prometheus-pusher.git
 ```
