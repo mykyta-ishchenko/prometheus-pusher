@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "prometheus_pusher"
-version = "0.1.0"
+version = "0.1.1"
 description = "Minimal Python library that enables you to automatically push Prometheus metrics from your application to a Pushgateway. It is ideal for short-lived jobs, multi-worker systems, and services where the pull-based Prometheus model is not practical."
 authors = ["Mykyta Ishchenko <mykita.ishchenko@gmail.com>"]
 readme = "README.md"
