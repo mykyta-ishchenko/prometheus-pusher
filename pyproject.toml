@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "prometheus_pusher"
+version = "0.1.0"
+description = "Minimal Python library that enables you to automatically push Prometheus metrics from your application to a Pushgateway. It is ideal for short-lived jobs, multi-worker systems, and services where the pull-based Prometheus model is not practical."
+authors = ["Mykyta Ishchenko <mykita.ishchenko@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prometheus-client = "^0.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.2"
+
+[tool.ruff]
+line-length = 100
+show-fixes = true
+lint.exclude = [".git", "__pycache__"]
+lint.extend-select = ["E", "F", "UP", "I"]
+target-version = "py310"
